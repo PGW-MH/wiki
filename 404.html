@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        const path = window.location.pathname.replace(/^\/wiki\//, '');
+        if (path) {
+            window.location.href = 'https://xyy.miraheze.org/wiki/' + encodeURIComponent(path);
+        } else {
+            window.location.href = 'https://xyy.miraheze.org/';
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecting…</p>
+</body>
+
+</html>

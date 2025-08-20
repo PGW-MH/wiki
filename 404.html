@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
+        const params = new URLSearchParams(window.location.search);
         const path = window.location.pathname.replace(/^\/wiki\//, '');
+
         if (path) {
             const fixedPath = decodeURIComponent(path).replace(/ /g, '_');
-            window.location.href = 'https://xyy.miraheze.org/wiki/' + fixedPath + '?useskin=cosmos';
+
+            if (params.get('lang') === 'modern') {
+                window.location.href = 'https://xyy.miraheze.org/wiki/' + fixedPath;
+            } else {
+                window.location.href = 'https://xyy.miraheze.org/wiki/' + fixedPath + '?useskin=cosmos';
+            }
         } else {
             window.location.href = 'https://xyy.miraheze.org/';
         }

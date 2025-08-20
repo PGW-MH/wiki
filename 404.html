@@ -8,7 +8,7 @@
         const path = window.location.pathname.replace(/^\/wiki\//, '');
         if (path) {
             const fixedPath = decodeURIComponent(path).replace(/ /g, '_');
-            window.location.href = 'https://xyy.miraheze.org/wiki/' + fixedPath;
+            window.location.href = 'https://xyy.miraheze.org/wiki/' + fixedPath + '?useskin=cosmos';
         } else {
             window.location.href = 'https://xyy.miraheze.org/';
         }
